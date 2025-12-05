@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mark Me | Digital Marketing in Pasadena, CA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mark Me is a small digital marketing studio in Pasadena, CA helping local businesses with social media, content, and simple websites.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    header {
+      background: #111827;
+      color: #f9fafb;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: #e5e7eb;
+      opacity: 0.9;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: #2563eb;
+      color: #f9fafb;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid #2563eb;
+      color: #2563eb;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      background: #eff6ff;
+    }
+
+    /* Hero */
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #111827);
+      color: #f9fafb;
+      padding: 3.5rem 0 3rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      color: #93c5fd;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span.highlight {
+      color: #60a5fa;
+    }
+
+    .hero-subtext {
+      font-size: 0.98rem;
+      color: #e5e7eb;
+      max-width: 28rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .hero-card {
+      background: #020617;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      font-size: 0.9rem;
+    }
+
+    .hero-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+    }
+
+    .hero-badge {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      background: #0b1120;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: #e5e7eb;
+    }
+
+    /* Sections */
+
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-bottom: 0.25rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.98rem;
+      color: #4b5563;
+      max-width: 34rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+      font-size: 0.92rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: #4b5563;
+      margin-bottom: 0.75rem;
+    }
+
+    .card small {
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      margin-bottom: 0.55rem;
+    }
+
+    .list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .list li {
+      padding-left: 1.1rem;
+      position: relative;
+      margin-bottom: 0.35rem;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #2563eb;
+      font-size: 0.8rem;
+    }
+
+    /* Split layout */
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      background: #ecfeff;
+      color: #0e7490;
+      padding: 0.2rem 0.7rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .steps {
+      list-style: none;
+      padding-left: 0;
+      counter-reset: step;
+    }
+
+    .steps li {
+      counter-increment: step;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .step-number {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 999px;
+      background: #2563eb;
+      color: #f9fafb;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-body h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .step-body p {
+      font-size: 0.86rem;
+      color: #4b5563;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .price {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .price span {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #6b7280;
+    }
+
+    .muted {
+      color: #6b7280;
+      font-size: 0.85rem;
+    }
+
+    /* Contact */
+
+    .contact-card {
+      background: #111827;
+      color: #f9fafb;
+      border-radius: 1.2rem;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .contact-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-card p {
+      font-size: 0.95rem;
+      color: #e5e7eb;
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-details {
+      font-size: 0.9rem;
+      color: #d1d5db;
+      margin-top: 0.75rem;
+    }
+
+    .contact-details div {
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-details span.label {
+      font-weight: 600;
+      color: #bfdbfe;
+    }
+
+    form {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    label {
+      font-size: 0.8rem;
+      color: #d1d5db;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.55rem 0.7rem;
+      border-radius: 0.6rem;
+      border: 1px solid #4b5563;
+      background: #020617;
+      color: #f9fafb;
+      font-size: 0.9rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #6b7280;
+    }
+
+    textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    footer {
+      padding: 1.75rem 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .split,
+      .pricing-grid,
+      .grid-3,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      header {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-bottom: 2.5rem;
+      }
+
+      .section-title {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">MARK ME</div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <div class="hero-kicker">Pasadena, California</div>
+      <h1>
+        Digital marketing for
+        <span class="highlight">local businesses that want to be seen</span>
+      </h1>
+      <p class="hero-subtext">
+        Mark Me is a small digital marketing studio in Pasadena, CA. I help restaurants, salons, gyms and local services look clean online and bring in more customers with simple, consistent content.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">Book a free audit</a>
+        <a href="#services" class="btn-outline">See what I do</a>
+      </div>
+      <p class="hero-note">
+        No big agency vibes. Clear work, simple prices, local focus.
+      </p>
+    </div>
+    <div class="hero-card">
+      <h3>What I set up for your business</h3>
+      <ul class="list">
+        <li>Instagram page with photos, reels and stories</li>
+        <li>Google Business profile so people can find you</li>
+        <li>Simple website with your hours, menu and contact</li>
+      </ul>
+      <div class="hero-badges">
+        <div class="hero-badge">Local to Pasadena</div>
+        <div class="hero-badge">Good for small restaurants</div>
+        <div class="hero-badge">Content made on a phone</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-kicker">About</div>
+    <h2 class="section-title">Who is behind Mark Me</h2>
+    <p class="section-subtitle">
+      My name is Julian Connor. I live in Pasadena and I study marketing while running Mark Me, a small digital studio that supports local businesses with real, simple online presence.
+    </p>
+    <div class="grid-3">
+      <div class="card">
+        <span class="tag">Local first</span>
+        <h3>Based in Pasadena</h3>
+        <p>
+          I know the streets, schools and areas where your customers live. Your content will feel like it belongs here, not like a stock template.
+        </p>
+        <small>Great fit for businesses in Pasadena and nearby cities.</small>
+      </div>
+      <div class="card">
+        <span class="tag">Social native</span>
+        <h3>Content that feels current</h3>
+        <p>
+          I build content that people actually watch. Short video, clean photos and simple captions that match how people use Instagram and TikTok today.
+        </p>
+        <small>Made for phones, not billboards.</small>
+      </div>
+      <div class="card">
+        <span class="tag">Straightforward</span>
+        <h3>Simple plans and updates</h3>
+        <p>
+          No confusing dashboards. You get clear plans, clear prices and short updates that show how your presence is growing.
+        </p>
+        <small>Perfect if this is your first time hiring for marketing.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-kicker">Services</div>
+    <h2 class="section-title">What I do for your business</h2>
+    <p class="section-subtitle">
+      You focus on food, clients and service. I take care of how you show up online so people can find you, trust you and walk through the door.
+    </p>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Social media setup and posting</h3>
+        <p>
+          Full Instagram setup or clean up for your restaurant, salon, gym or service.
+        </p>
+        <ul class="list">
+          <li>Profile picture, bio and highlights</li>
+          <li>Three to five posts every week</li>
+          <li>Reels for your food, space or work</li>
+          <li>Stories for daily specials or offers</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Content creation on site</h3>
+        <p>
+          I visit your business in person to shoot photos and short videos using a phone, then edit and post them for you.
+        </p>
+        <ul class="list">
+          <li>Food photos and short clips</li>
+          <li>Before and after results for salons or gyms</li>
+          <li>Team and behind the scenes moments</li>
+          <li>Simple, clean editing that fits your style</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Google and simple website</h3>
+        <p>
+          Basic online setup so people can find you when they search on their phone.
+        </p>
+        <ul class="list">
+          <li>Google Business profile with hours and photos</li>
+          <li>Simple one page website</li>
+          <li>Menu, services and location in one place</li>
+          <li>Contact and map links ready to tap</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container split">
+    <div>
+      <div class="section-kicker">How it works</div>
+      <h2 class="section-title">Three clear steps</h2>
+      <p class="section-subtitle">
+        Working with Mark Me is simple. No long contract, just a month to month plan that grows with you.
+      </p>
+      <ul class="steps">
+        <li>
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <h4>Free call or visit</h4>
+            <p>
+              We talk for ten to fifteen minutes about your business, your customers and what you want more of. This part is free.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <h4>Setup and content week</h4>
+            <p>
+              I set up or clean your Instagram and Google profile, and visit once to capture content for the first month of posts.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="step-number">3</div>
+          <div class="step-body">
+            <h4>Weekly posting and updates</h4>
+            <p>
+              I post for you each week and send a short summary at the end of each month with growth and ideas for the next one.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="pill">Good fit checklist</div>
+      <div class="card">
+        <h3>We match well if</h3>
+        <ul class="list">
+          <li>You are a small business in or near Pasadena</li>
+          <li>You want to look better online and be easier to find</li>
+          <li>You do not have time to post or manage social media</li>
+          <li>You like clear, simple communication and pricing</li>
+        </ul>
+        <p class="muted" style="margin-top:0.75rem;">
+          If that sounds like you, fill out the form below and I will reply within one business day.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-kicker">Pricing</div>
+    <h2 class="section-title">Starter plans for local businesses</h2>
+    <p class="section-subtitle">
+      These plans are made for small businesses that are new to marketing. We can adjust them after we talk about what you need.
+    </p>
+    <div class="pricing-grid">
+      <div class="card">
+        <span class="tag">Start here</span>
+        <h3>Starter Social</h3>
+        <p class="price">$300<span>/month</span></p>
+        <p class="muted">Great if you want to start posting and look more professional online.</p>
+        <ul class="list" style="margin-top:0.6rem;">
+          <li>Instagram setup or clean up</li>
+          <li>Three posts every week</li>
+          <li>One content visit in the first month</li>
+          <li>Basic caption writing and posting</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Most popular</span>
+        <h3>Growth Local</h3>
+        <p class="price">$500<span>/month</span></p>
+        <p class="muted">For restaurants, salons and gyms that want steady local growth.</p>
+        <ul class="list" style="margin-top:0.6rem;">
+          <li>Four to five posts each week</li>
+          <li>Reels and stories for offers and specials</li>
+          <li>Google Business profile setup</li>
+          <li>Monthly growth summary</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Full support</span>
+        <h3>All Online</h3>
+        <p class="price">$800<span>/month</span></p>
+        <p class="muted">For owners who want almost everything online handled for them.</p>
+        <ul class="list" style="margin-top:0.6rem;">
+          <li>All Growth Local features</li>
+          <li>Simple one page website</li>
+          <li>Basic local ad setup and management</li>
+          <li>Priority message support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-card">
+      <div>
+        <h2>Book a free marketing audit</h2>
+        <p>
+          Tell me a little about your business and I will send a short list of ideas for how you can get more local customers online.
+        </p>
+        <div class="contact-details">
+          <div><span class="label">Location:</span> Pasadena, California</div>
+          <div><span class="label">Email:</span> <a href="mailto:julianconnor13@gmail.com">julianconnor13@gmail.com</a></div>
+          <div><span class="label">Phone:</span> <a href="tel:+16266604413">+1 (626) 660-4413</a></div>
+        </div>
+      </div>
+      <div>
+        <!-- To make this form send you emails, see the instructions below (Formspree step). -->
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Your name">
+          </div>
+          <div>
+            <label for="business">Business name</label>
+            <input id="business" name="business" type="text" placeholder="Your business name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="_replyto" type="email" placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="message">What do you need help with?</label>
+            <textarea id="message" name="message" placeholder="Example: We want better Instagram and Google presence."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    &copy; <span id="year"></span> Mark Me. Pasadena, CA.
+  </div>
+</footer>
+
+<script>
+  // Set current year in footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
