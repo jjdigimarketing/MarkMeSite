@@ -4,91 +4,230 @@
   <meta charset="UTF-8">
   <title>Mark Me | Digital Marketing in Pasadena, CA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mark Me is a digital marketing studio in Pasadena, CA helping all kinds of businesses with Instagram, TikTok, and beginner websites.">
+  <meta name="description" content="Mark Me is a digital marketing team in Pasadena helping all types of businesses with Instagram, TikTok, and beginner-friendly websites.">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { background-color: #f5f5f5; color: #111827; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; border-radius: 8px; }
+    .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
 
-    body {
-      background-color: #f5f5f5;
-      color: #111827;
-      line-height: 1.6;
-    }
+    /* Header */
+    header { background: #111827; color: #f9fafb; padding: 1rem 0; position: sticky; top: 0; z-index: 10; }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 700; letter-spacing: 0.08em; font-size: 1.1rem; }
+    .nav-links { display: flex; gap: 1.5rem; font-size: 0.95rem; }
+    .nav-links a { color: #e5e7eb; opacity: 0.9; }
+    .nav-links a:hover { opacity: 1; }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    /* Buttons */
+    .btn-primary { display: inline-block; background: #2563eb; color: #fff; padding: 0.75rem 1.5rem; border-radius: 999px; font-weight: 600; }
+    .btn-primary:hover { background: #1d4ed8; }
+    .btn-outline { display: inline-block; border: 1px solid #2563eb; color: #2563eb; padding: 0.75rem 1.5rem; border-radius: 999px; font-weight: 500; }
+    .btn-outline:hover { background: #eff6ff; }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #0f172a, #111827); color: #fff; padding: 3.5rem 0; }
+    .hero-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 3rem; align-items: center; }
+    .hero h1 { font-size: 2.4rem; margin-bottom: 1rem; }
+    .highlight { color: #60a5fa; }
+    .hero-subtext { font-size: 1rem; margin-bottom: 1.5rem; max-width: 30rem; }
+    .hero-card { background: #020617; padding: 1.5rem; border-radius: 1rem; border: 1px solid rgba(148,163,184,0.3); }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+    .hero-badge { padding: 0.35rem 0.75rem; font-size: 0.75rem; background: #0b1120; border: 1px solid rgba(148,163,184,0.4); border-radius: 999px; }
 
-    .container {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
+    /* Sections */
+    section { padding: 3rem 0; }
+    .section-title { font-size: 1.7rem; margin-bottom: 0.5rem; }
+    .section-subtitle { font-size: 1rem; color: #4b5563; margin-bottom: 1.5rem; max-width: 36rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
+    .card { background: #fff; border-radius: 1rem; padding: 1.5rem; border: 1px solid #e5e7eb; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+    .tag { display: inline-block; font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 999px; background: #eff6ff; color: #2563eb; margin-bottom: 0.6rem; }
+    .list { list-style: none; padding-left: 0; }
+    .list li { margin-bottom: 0.45rem; padding-left: 1rem; position: relative; }
+    .list li::before { content: "•"; position: absolute; left: 0; color: #2563eb; }
 
-    header {
-      background: #111827;
-      color: #f9fafb;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+    /* Fashion Section */
+    .fashion-hero { background: #0f172a; color: #fff; padding: 3rem 0; text-align: center; }
+    .fashion-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.4rem; margin-top: 2rem; }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    /* Contact */
+    .contact-card { background: #111827; color: #fff; padding: 2rem; border-radius: 1.2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
+    .contact-details { margin-top: 0.8rem; font-size: 0.9rem; }
+    input, textarea { width: 100%; padding: 0.7rem; border-radius: 0.6rem; border: 1px solid #475569; background: #0f172a; color: #fff; }
+    textarea { min-height: 90px; resize: vertical; }
 
-    .logo {
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      font-size: 1.1rem;
-    }
+    footer { padding: 2rem 0; text-align: center; font-size: 0.85rem; color: #6b7280; }
+  </style>
+</head>
 
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      font-size: 0.95rem;
-    }
+<body>
 
-    .nav-links a {
-      color: #e5e7eb;
-      opacity: 0.9;
-    }
+<header>
+  <div class="container nav">
+    <div class="logo">MARK ME</div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#fashion">Fashion</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    .nav-links a:hover {
-      opacity: 1;
-    }
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <h1>Digital marketing for <span class="highlight">businesses that want to grow</span>.</h1>
+      <p class="hero-subtext">We are a Pasadena-based marketing team helping all types of businesses with Instagram, TikTok content, and clean beginner websites.</p>
+      <a href="#contact" class="btn-primary">Book a free strategy call</a>
+    </div>
 
-    .btn-primary {
-      display: inline-block;
-      background: #2563eb;
-      color: #f9fafb;
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-    }
+    <div class="hero-card">
+      <h3>What we set up for your business</h3>
+      <ul class="list">
+        <li>Instagram + TikTok posting and growth</li>
+        <li>Simple website with your info + contact</li>
+        <li>Clean brand visuals and layout</li>
+      </ul>
+      <div class="hero-badges">
+        <div class="hero-badge">Any Business Type</div>
+        <div class="hero-badge">Pasadena Based</div>
+        <div class="hero-badge">Short-Form Experts</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    .btn-primary:hover {
-      background: #1d4ed8;
-    }
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Services</h2>
+    <p class="section-subtitle">We help your business show up clean, consistent, and trustworthy online.</p>
 
-    .btn-outline {
-      display: inline-block;
-      border: 1px solid #2563eb;
-      color: #2563eb
+    <div class="grid-3">
+      <div class="card">
+        <span class="tag">Social Media</span>
+        <h3>Instagram & TikTok Management</h3>
+        <ul class="list">
+          <li>Reels, videos, photos, and weekly posting</li>
+          <li>Caption writing & simple strategy</li>
+          <li>Profile clean-up and branding</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="tag">Content</span>
+        <h3>On-site photo & video</h3>
+        <ul class="list">
+          <li>Short-form vertical videos</li>
+          <li>Clean and modern edits</li>
+          <li>Product, food, and service footage</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="tag">Websites</span>
+        <h3>Beginner Websites</h3>
+        <ul class="list">
+          <li>1-page clean business sites</li>
+          <li>Mobile optimized</li>
+          <li>Fast, simple, and aesthetic</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fashion" class="fashion-hero">
+  <div class="container">
+    <h2 class="section-title" style="color:white;">Fashion Social Media Results</h2>
+    <p class="section-subtitle" style="color:#cbd5e1;">We’ve built fashion content to 2.7k followers and over 300,000 likes — clean aesthetic, high-engagement short-form videos. This could be your brand.</p>
+
+    <div class="fashion-grid">
+      <img src="fashion1.jpg" alt="Fashion content example 1">
+      <img src="fashion2.jpg" alt="Fashion content example 2">
+      <img src="fashion3.jpg" alt="Fashion content example 3">
+    </div>
+
+    <a href="#contact" class="btn-outline" style="margin-top:1.5rem; display:inline-block;">Start your fashion growth</a>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <h2 class="section-title">Pricing</h2>
+    <p class="section-subtitle">Simple plans that fit beginner businesses and growing brands.</p>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Starter Social</h3>
+        <p>$300/month</p>
+        <ul class="list">
+          <li>IG + TikTok posting</li>
+          <li>Basic editing</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Growth Plan</h3>
+        <p>$500/month</p>
+        <ul class="list">
+          <li>4–5 posts weekly</li>
+          <li>Reels + photo content</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Full Online Package</h3>
+        <p>$800 first month</p>
+        <ul class="list">
+          <li>Website + social media</li>
+          <li>Brand clean-up</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-card">
+      <div>
+        <h2>Contact Us</h2>
+        <p>Send a message and our Pasadena-based team will get back to you within 1 business day.</p>
+
+        <div class="contact-details">
+          <p><strong>Email:</strong> markmedigi@gmail.com</p>
+          <p><strong>Phone:</strong> (626) 660-4413</p>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/xvgeqlnk" method="POST">
+        <label>Your Name</label>
+        <input type="text" name="name" required>
+
+        <label>Business Name</label>
+        <input type="text" name="business">
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Your Message</label>
+        <textarea name="message" required></textarea>
+
+        <button class="btn-primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; <span id="year"></span> Mark Me. Pasadena, CA.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
