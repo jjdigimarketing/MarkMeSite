@@ -47,9 +47,11 @@
     .list li { margin-bottom: 0.45rem; padding-left: 1rem; position: relative; }
     .list li::before { content: "•"; position: absolute; left: 0; color: #2563eb; }
 
-    /* Fashion Section */
-    .fashion-hero { background: #0f172a; color: #fff; padding: 3rem 0; text-align: center; }
-    .fashion-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.4rem; margin-top: 2rem; }
+    /* Results Section */
+    .results-hero { background: #0f172a; color: #fff; padding: 3rem 0; }
+    .results-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; align-items: center; }
+    .results-text p { color: #cbd5e1; font-size: 0.98rem; margin-top: 0.75rem; }
+    .results-image { background: #020617; padding: 1rem; border-radius: 1.2rem; border: 1px solid rgba(148,163,184,0.4); }
 
     /* Contact */
     .contact-card { background: #111827; color: #fff; padding: 2rem; border-radius: 1.2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
@@ -68,7 +70,7 @@
     <div class="logo">MARK ME</div>
     <nav class="nav-links">
       <a href="#services">Services</a>
-      <a href="#fashion">Fashion</a>
+      <a href="#results">Results</a>
       <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -138,18 +140,18 @@
   </div>
 </section>
 
-<section id="fashion" class="fashion-hero">
-  <div class="container">
-    <h2 class="section-title" style="color:white;">Fashion Social Media Results</h2>
-    <p class="section-subtitle" style="color:#cbd5e1;">We’ve built fashion content to 2.7k followers and over 300,000 likes — clean aesthetic, high-engagement short-form videos. This could be your brand.</p>
-
-    <div class="fashion-grid">
-      <img src="fashion1.jpg" alt="Fashion content example 1">
-      <img src="fashion2.jpg" alt="Fashion content example 2">
-      <img src="fashion3.jpg" alt="Fashion content example 3">
+<section id="results" class="results-hero">
+  <div class="container results-inner">
+    <div class="results-text">
+      <h2 class="section-title" style="color:white;">Growth Results</h2>
+      <p>We don’t just post content — we grow attention. Here’s a real example of viral short-form content performance: over 500,000 post views, thousands of profile visits, and high engagement in a single month.</p>
+      <p>We use simple but effective strategies: consistent posting, clean visuals, and content that’s actually watchable. Your business can be next.</p>
+      <a href="#contact" class="btn-outline" style="margin-top:1.25rem; display:inline-block;">Get results like this</a>
     </div>
 
-    <a href="#contact" class="btn-outline" style="margin-top:1.5rem; display:inline-block;">Start your fashion growth</a>
+    <div class="results-image">
+      <img src="growth-results.png" alt="Viral growth results analytics graphic">
+    </div>
   </div>
 </section>
 
